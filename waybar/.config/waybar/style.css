@@ -2,7 +2,7 @@
 
 * {
     font-family: "MesloLGS Nerd Font Mono Bold";
-    font-size: 16px;
+    font-size: 12px;
     min-height: 0;
     font-weight: bold;
 }
@@ -36,6 +36,7 @@ button:hover {
 
 #workspaces button {
     padding: 0 4px;
+    color: #FFF;
 }
 
 #workspaces button.focused {
@@ -46,7 +47,7 @@ button:hover {
 
 #workspaces button.active {
     background-color: rgba(0, 0, 0, 0.3);
-    color: @mauve;
+    color: @green;
     border-top: 2px solid @mauve;
 }
 
@@ -76,8 +77,8 @@ button:hover {
 }
 
 #clock {
-    color: @maroon;
-    border-bottom: 2px solid @maroon;
+    color: @lavendel;
+    border-bottom: 1px solid @lavendel;
 }
 
 #clock.date {
@@ -91,8 +92,8 @@ button:hover {
 }
 
 #network {
-    color: @yellow;
-    border-bottom: 2px solid @yellow;
+    color: @teal;
+    border-bottom: .5px solid @yellow;
 }
 
 #idle_inhibitor {

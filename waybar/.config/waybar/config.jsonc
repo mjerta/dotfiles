@@ -3,8 +3,31 @@
   "modules-left": ["hyprland/workspaces"],
   "modules-center": ["hyprland/window"],
   "modules-right": ["network", "pulseaudio", "battery", "clock"],
+  "hyprland/workspaces": {
+	  "all-outputs": false,
+	  "active-only": false,
+	  "format": "{icon}",
+	  "format": "{name} : {icon}",
+	  "format-icons": {
+		"1": "",
+		"2": "",
+	  	"3": "",
+	  	"4": "",
+		"5": "",
+		"6": "",
+		"7": "",
+		"8": "",
+		"9": "",
+		"10": "",
+		"persistent": ""
+	},
+		"persistent-workspaces": {
+//      			"eDP-1": [1, 2, 3, 4, 5],
+//      			"DP-4": [6, 7, 8, 9, 10]
+    		}
+  },
   "clock": {
-    "format": "<span foreground='#f5c2e7'>   </span>{:%a %d %H:%M}",
+    "format": "<span foreground='#b4befe'>   </span>{:%a %d %H:%M}",
     "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>"
   },
   "battery": {
@@ -23,11 +46,12 @@
     "tooltip-format": "{time}"
   },
   "network": {
-    "format-wifi": "<span size='13000' foreground='#f5e0dc'>  </span>{essid}",
+    "format-wifi": "<span size='10000' foreground='#94e2d5'>  </span>{essid}",
     "format-ethernet": "<span size='13000' foreground='#f5e0dc'>󰤭  </span> Disconnected",
     "format-linked": "{ifname} (No IP) ",
     "format-disconnected": "<span size='13000' foreground='#f5e0dc'>  </span>Disconnected",
-    "tooltip-format-wifi": "Signal Strenght: {signalStrength}%"
+    "tooltip-format-wifi": "Signal Strenght: {signalStrength}%",
+    "on-click": "kitty nmtui"
   },
   "pulseaudio": {
       "format": "{icon}  {volume}%",
