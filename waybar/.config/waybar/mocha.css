@@ -1,26 +1,27 @@
-@define-color rosewater #f5e0dc;
-@define-color flamingo #f2cdcd;
-@define-color pink #f5c2e7;
-@define-color mauve #cba6f7;
-@define-color red #f38ba8;
-@define-color maroon #eba0ac;
-@define-color peach #fab387;
-@define-color yellow #f9e2af;
-@define-color green #a6e3a1;
-@define-color teal #94e2d5;
-@define-color sky #89dceb;
-@define-color sapphire #74c7ec;
-@define-color blue #89b4fa;
-@define-color lavender #b4befe;
-@define-color text #cdd6f4;
-@define-color subtext1 #bac2de;
-@define-color subtext0 #a6adc8;
-@define-color overlay2 #9399b2;
-@define-color overlay1 #7f849c;
-@define-color overlay0 #6c7086;
-@define-color surface2 #585b70;
-@define-color surface1 #45475a;
-@define-color surface0 #313244;
-@define-color base #1e1e2e;
-@define-color mantle #181825;
-@define-color crust #11111b;
+@define-color rosewater #f5e0dc;  /* Light */
+@define-color flamingo #f2cdcd;  /* Light */
+@define-color pink #f5c2e7;      /* Light */
+@define-color mauve #cba6f7;     /* Light */
+@define-color red #cc241d;       /* Dark Red */
+@define-color maroon #eba0ac;    /* Dark Red */
+@define-color peach #fab387;     /* Light */
+@define-color yellow #d79921;    /* Yellow */
+@define-color green #8ec07c;     /* Green */
+@define-color teal #94e2d5;      /* Teal */
+@define-color sky #89dceb;       /* Blue */
+@define-color sapphire #74c7ec;  /* Blue */
+@define-color blue #458588;      /* Blue */
+@define-color lavender #b4befe;  /* Light */
+@define-color text #ebdbb2;      /* Light */
+@define-color subtext1 #bac2de;  /* Faded Text */
+@define-color subtext0 #a6adc8;  /* Faded Text */
+@define-color overlay2 #9399b2;  /* Muted */
+@define-color overlay1 #7f849c;  /* Muted */
+@define-color overlay0 #6c7086;  /* Muted */
+@define-color surface2 #585b70;  /* Darker */
+@define-color surface1 #45475a;  /* Dark */
+@define-color surface0 #313244;  /* Darkest */
+@define-color base #3c3836;      /* Base */
+@define-color mantle #1d2021;    /* Darkest */
+@define-color crust #1d2021;     /* Darkest */
+

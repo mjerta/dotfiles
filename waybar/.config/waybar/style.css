@@ -1,4 +1,5 @@
-@import "mocha.css"; 
+/*@import "mocha.css"; */
+@import "gruvbox.css";
 
 * {
     font-family: "MesloLGS Nerd Font Mono Bold";

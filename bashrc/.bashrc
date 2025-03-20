@@ -1,0 +1,50 @@
+#evaluations
+eval "$(starship init bash)"
+
+# If not running interactively, don't do anything
+[[ $- != *i* ]] && return
+
+#aliases
+alias ls='ls -l --color=auto'
+alias grep='grep --color=auto'
+alias wifi='nmtui'
+alias githublink='~/my-setup-scripts/scripts/githublink.sh'
+alias githubrepo='~/my-setup-scripts/scripts/creategithubrepo.sh'
+alias githubclone='~/my-setup-scripts/scripts/githubclone.sh'
+alias springboot='~/my-setup-scripts/scripts/springboot.sh'
+alias scan='~/my-setup-scripts/scripts/scan.sh'
+alias tmux-sessionizer='~/my-setup-scripts/scripts/tmux-sessionizer.sh'
+alias .='cd ..'
+alias ..='cd ../../'
+alias ...='cd ../../../'
+alias mpdev='ssh root@mpdev.nl'
+alias thinkcentre='ssh root@thinkcentre.mpdev.nl'
+alias bashrc='nvim ~/.bashrc'
+alias sbashrc='source ~/.bashrc'
+alias update='sudo pacman -Sy'
+alias snvim=' sudo nvim'
+alias n='nvim'
+PS1='[\u@\h \W]\$ '
+
+#bindings
+bind '"\C-f": "bash ~/my-setup-scripts/scripts/tmux-sessionizer.sh\n"'
+
+#exports
+export EDITOR=nvim
+export GH_EDITOR=nvim
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"                   # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion" # This loads nvm bash_completion
+
+#sources
+if [ -f ~/.bashrc_secrets ]; then
+  source ~/.bashrc_secrets
+fi
+source /usr/share/git/completion/git-completion.bash
+source "$HOME/.sdkman/bin/sdkman-init.sh"
+# Load Angular CLI autocompletion.
+source <(ng completion script)
+
+#THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
+export SDKMAN_DIR="$HOME/.sdkman"
+[[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
