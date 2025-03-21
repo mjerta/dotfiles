@@ -13,7 +13,7 @@ return {
         colors.fg_float = "#FFFFFF"
       end,
       on_highlights = function(highlights, colors)
-        highlights.CursorLineNr = { fg = colors.yellow, bold = true }
+        -- highlights.CursorLineNr = { fg = colors.yellow, bold = true }
       end,
     })
     vim.cmd([[colorscheme tokyonight]])

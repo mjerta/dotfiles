@@ -1,32 +1,36 @@
 #!/usr/bin/env bash
 
-if [[ $# -eq 1 ]]; then
-  selected=$1
-else
-  # selected=$(find ~/develop/projects -mindepth 1 -maxdepth 1 -type d | fzf --reverse
-  # Prepend numbers to the directory list for faster selection
-  selected=$(find -L ~/develop/projects ~/.config ~/my-setup-scripts -mindepth 1 -maxdepth 1 -type d |
-    awk '{print NR ": " $0}' | fzf --reverse --bind 'enter:accept' |
-    cut -d: -f2-)
-fi
+# Function to search directories with fzf
+search_dirs() {
+  local dir="$1"
+
+  find -L "$dir" -mindepth 1 -maxdepth 1 -type d |
+    awk '{print NR ": " $0}' |
+    fzf --reverse \
+        --header=$'TMUX-SESSIONIZER \nSearching inside:'"$dir"$' \nCTRL-p for ~/.config\nCTRL-f for ~/dotfiles\nCTRL-d for ~/develop/projects\nCTRl-t for ~/develop/testing\n\n' \
+        --bind "ctrl-p:reload(find -L ~/.config ~/my-setup-scripts -mindepth 1 -maxdepth 1 -type d | awk '{print NR \": \" \$0}')" \
+        --bind "ctrl-f:reload(find -L ~/dotfiles -mindepth 1 -maxdepth 1 -type d | awk '{print NR \": \" \$0}')" \
+        --bind "ctrl-d:reload(find -L ~/develop/projects -mindepth 1 -maxdepth 1 -type d | awk '{print NR \": \" \$0}')" \
+        --bind "ctrl-t:reload(find -L ~/develop/testing -mindepth 1 -maxdepth 1 -type d | awk '{print NR \": \" \$0}')" \
+        --bind 'enter:accept' |
+    cut -d: -f2-
+}
+
+# Start searching in ~/develop/projects by default
+selected=$(search_dirs "$HOME/develop/projects")
 
 if [[ -z $selected ]]; then
+  echo $selected
   exit 0
 fi
 
 selected_name=$(basename "$selected" | tr . _)
 tmux_running=$(pgrep tmux)
 
-# if [[ -z $TMUX ]] && [[ -z $tmux_running ]]; then
-#     tmux new-session -s $selected_name -c $selected
-#     exit 0
-# fi
 if [[ -z $TMUX ]]; then
   if [[ -z $tmux_running ]]; then
-    # Start a new tmux session if tmux is not running
     tmux new-session -s $selected_name -c $selected
   else
-    # Attach to the existing session if tmux is running
     tmux attach-session -t $selected_name || tmux new-session -s $selected_name -c $selected
   fi
   exit 0
@@ -37,3 +41,4 @@ if ! tmux has-session -t=$selected_name 2>/dev/null; then
 fi
 
 tmux switch-client -t $selected_name
+
