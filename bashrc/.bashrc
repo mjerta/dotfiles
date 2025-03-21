@@ -8,6 +8,7 @@ eval "$(starship init bash)"
 alias ls='ls -l --color=auto'
 alias grep='grep --color=auto'
 alias wifi='nmtui'
+alias ai='~/my-setup-scripts/scripts/ai.sh'
 alias githublink='~/my-setup-scripts/scripts/githublink.sh'
 alias githubrepo='~/my-setup-scripts/scripts/creategithubrepo.sh'
 alias githubclone='~/my-setup-scripts/scripts/githubclone.sh'
