@@ -38,6 +38,7 @@ vim.keymap.set(
 )
 
 vim.keymap.set("n", "<C-f>", "<cmd>silent !kitty $HOME/my-setup-scripts/scripts/tmux-sessionizer.sh<CR>")
+vim.keymap.set("n", "<m-f>", "<cmd>silent !kitty $HOME/my-setup-scripts/scripts/create-project.sh<CR>")
 vim.keymap.set("n", "<C-a>", "ggVG", { noremap = true, silent = true })
 vim.keymap.set("v", "<C-c>", '"+y')
 vim.keymap.set("n", "<C-v>", '"+P')

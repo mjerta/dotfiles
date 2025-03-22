@@ -31,6 +31,7 @@ PS1='[\u@\h \W]\$ '
 
 #bindings
 bind '"\C-f": "bash ~/my-setup-scripts/scripts/tmux-sessionizer.sh\n"'
+bind '"\ef": "bash ~/my-setup-scripts/scripts/create-project.sh\n"'
 
 #exports
 export EDITOR=nvim
