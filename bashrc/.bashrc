@@ -13,6 +13,8 @@ alias githublink='~/my-setup-scripts/scripts/githublink.sh'
 alias githubrepo='~/my-setup-scripts/scripts/creategithubrepo.sh'
 alias githubclone='~/my-setup-scripts/scripts/githubclone.sh'
 alias springboot='~/my-setup-scripts/scripts/springboot.sh'
+alias maven='~/my-setup-scripts/scripts/maven.sh'
+alias maven-quickstart='~/my-setup-scripts/scripts/maven-quickstart.sh'
 alias scan='~/my-setup-scripts/scripts/scan.sh'
 alias tmux-sessionizer='~/my-setup-scripts/scripts/tmux-sessionizer.sh'
 alias .='cd ..'
@@ -39,6 +41,8 @@ export GH_EDITOR=nvim
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"                   # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion" # This loads nvm bash_completion
+export JAVA_HOME=/usr/lib/jvm/java-21-amazon-corretto
+export PATH=$JAVA_HOME/bin:$PATH
 
 #sources
 if [ -f ~/.bashrc_secrets ]; then
