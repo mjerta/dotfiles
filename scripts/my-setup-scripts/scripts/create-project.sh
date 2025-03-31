@@ -4,8 +4,9 @@ base_location="$HOME/develop/"
 projects[1]='testing'
 projects[2]='projects'
 type[1]='Java'
-type[2]='Vite'
-type[3]='Empty'
+type[2]='Springboot'
+type[3]='Vite'
+type[4]='Empty'
 
 create_welcome_message() {
   clear
@@ -106,9 +107,73 @@ while true; do
   else
     type_project="${type[$type_project]}"
     new_folder="$base_location$default_location/$project_name"
+    folder_special_use_case="$base_location$default_location"
     # Adding all options in for creating the type of project
     if [[ "$type_project" == "Empty" ]]; then
       mkdir -p "$new_folder"
+      break
+    elif [[ "$type_project" == "Vite" ]]; then
+      cd $folder_special_use_case
+      npm create vite@latest "$project_name"
+      break
+    elif [[ "$type_project" == "Java" ]]; then
+      cd $folder_special_use_case
+      ~/my-setup-scripts/scripts/maven-quickstart.sh "$project_name"
+      break
+    elif [[ "$type_project" == "Springboot" ]]; then
+      cd $folder_special_use_case
+      ~/my-setup-scripts/scripts/springboot.sh "$project_name"
+      cd "$project_name"
+      # Rename gitignore to .gitignore if it exists
+      if [ -f "gitignore" ]; then
+        echo "Renaming gitignore to .gitignore"
+        mv "gitignore" ".gitignore"
+        notify-send "gitignore detecetd anc change to .gitignore"
+      else
+        notify-send ".gitignore was already created"
+      fi
+      echo "pg_data/" >> .gitignore
+      echo "docker-compose.yml" >> .gitignore
+      echo ".env" >> .gitignore
+
+      app_properties="src/main/resources/application.properties"
+
+      cat >> "$app_properties" <<EOF
+spring.config.import=optional:file:.env[.properties]
+spring.sql.init.platform=postgres
+spring.datasource.url=jdbc:postgresql://\${POSTGRES_HOST}:\${POSTGRES_PORT}/\${POSTGRES_DB}
+spring.datasource.username=\${POSTGRES_USER}
+spring.datasource.password=\${POSTGRES_PASSWORD}
+spring.jpa.properties.hibernate.dialect=org.hibernate.dialect.PostgreSQLDialect
+spring.jpa.hibernate.ddl-auto=create
+spring.sql.init.mode=always
+spring.jpa.defer-datasource-initialization=true
+spring.jpa.show-sql=true
+logging.level.org.springframework.security=DEBUG
+EOF
+      cat >.env << EOF
+POSTGRES_HOST=localhost
+POSTGRES_PORT=5432
+POSTGRES_USER=user
+POSTGRES_PASSWORD=password
+POSTGRES_DB=$project_name
+EOF
+      cat >docker-compose.yml <<EOF
+version: '3.9'
+
+services:
+
+  db:
+    container_name: $project_name
+    image: postgres
+    shm_size: 128mb
+    env_file:
+      - .env
+    ports:
+      - "5432:5432"
+    volumes:
+      - './pg_data:/var/lib/postgresql/data/'
+EOF
       break
     else
       is_available=false

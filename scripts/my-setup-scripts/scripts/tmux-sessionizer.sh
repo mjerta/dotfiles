@@ -10,7 +10,7 @@ search_dirs() {
         --header=$'TMUX-SESSIONIZER \nSearching inside:'"$dir"$' \nCTRL-p for ~/.config\nCTRL-f for ~/dotfiles\nCTRL-d for ~/develop/projects\nCTRl-t for ~/develop/testing\n\n' \
         --bind "ctrl-p:reload(find -L ~/.config ~/my-setup-scripts -mindepth 1 -maxdepth 1 -type d | awk '{print NR \": \" \$0}')" \
         --bind "ctrl-f:reload(find -L ~/dotfiles -mindepth 1 -maxdepth 1 -type d | awk '{print NR \": \" \$0}')" \
-        --bind "ctrl-d:reload(find -L ~/develop/projects -mindepth 6 -maxdepth 1 -type d | awk '{print NR \": \" \$2}')" \
+        --bind "ctrl-d:reload(find -L ~/develop/projects -mindepth 1 -maxdepth 1 -type d | awk '{print NR \": \" \$0}')" \
         --bind "ctrl-t:reload(find -L ~/develop/testing -mindepth 1 -maxdepth 1 -type d | awk '{print NR \": \" \$0}')" \
         --bind 'enter:accept' |
     cut -d: -f2-
