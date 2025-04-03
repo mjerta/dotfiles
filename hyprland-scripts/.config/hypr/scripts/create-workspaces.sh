@@ -22,10 +22,10 @@ if [[ "$BNQ_INFO" == "BNQ" ]]; then
   done
 else
   for i in {1..5}; do
-    echo "workspace= $i,monitor:DP-4, default:true" >>"$WORKSPACE_CONFIG_FILE"
+    echo "workspace= $i,monitor:eDP-1, default:true" >>"$WORKSPACE_CONFIG_FILE"
   done
 
   for i in {6..10}; do
-    echo "workspace= $i,monitor:eDP-1, default:true" >>"$WORKSPACE_CONFIG_FILE"
+    echo "workspace= $i,monitor:DP-3, default:true" >>"$WORKSPACE_CONFIG_FILE"
   done
 fi

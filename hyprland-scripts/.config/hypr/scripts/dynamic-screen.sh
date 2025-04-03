@@ -15,9 +15,8 @@ if [[ "$BNQ_INFO" == "BNQ" ]]; then
   hyprctl keyword monitor "DP-5,preferred,1366x0,1"
   hyprctl keyword monitor "DP-4,preferred,3286x0,1,transform,1"
 else
-  echo "BNQ monitor not detected, using alternative setup"
-
+  notify-send "Mjerta downstairs setup detected"
   # Configure monitors
   hyprctl keyword monitor "eDP-1,preferred,0x0,1"
-  hyprctl keyword monitor "DP-4,preferred,-1366x0,1"
+  hyprctl keyword monitor "DP-3,preferred,auto-left,1"
 fi

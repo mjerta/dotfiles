@@ -3,6 +3,7 @@
 base_location="$HOME/develop/"
 projects[1]='testing'
 projects[2]='projects'
+
 type[1]='Java'
 type[2]='Springboot'
 type[3]='Vite'
@@ -142,7 +143,7 @@ while true; do
 spring.config.import=optional:file:.env[.properties]
 spring.sql.init.platform=postgres
 spring.datasource.url=jdbc:postgresql://\${POSTGRES_HOST}:\${POSTGRES_PORT}/\${POSTGRES_DB}
-spring.datasource.username=\${POSTGRES_USER}
+spring.datasource.username=\${POSTGRES_USER}projects[2]='projects'
 spring.datasource.password=\${POSTGRES_PASSWORD}
 spring.jpa.properties.hibernate.dialect=org.hibernate.dialect.PostgreSQLDialect
 spring.jpa.hibernate.ddl-auto=create
