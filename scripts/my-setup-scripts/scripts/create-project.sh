@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# Fail-fast on any error caused by external scripts 
+# Fail-fast on any error caused by external scriptssc 
 set -e
 # Setting some default values
 base_location="$HOME/develop/"
@@ -13,6 +13,24 @@ type[4]='Empty'
 
 create_welcome_message() {
   clear
+  ORANGE='\033[38;5;214m'
+  NC='\033[0m'
+
+  echo -e "${ORANGE}╔╤╤╤╤╤╤╤╤╤╤╤╤╤╤╤╤╤╤╤╤╤╤╤╤╤╤╤╤╤╤╤╤╤╤╤╤╤╤╤╤╤╤╤╤╤╗${NC}"
+  echo -e "${ORANGE}╟┼┴┴┴┴┴┴┴┴┴┴┴┴┴┴┴┴┴┴┴┴┴┴┴┴┴┴┴┴┴┴┴┴┴┴┴┴┴┴┴┴┴┴┴┼╢${NC}"
+  echo -e "${ORANGE}╟┤                                           ├╢${NC}"
+  echo -e "${ORANGE}╟┤   \033[38;5;109m___  ____  ____   __  ____  ____\033[0m        ${ORANGE}├╢${NC}"
+  echo -e "${ORANGE}╟┤  \033[38;5;109m/ __)(  _ \(  __) / _\(_  _)(  __)\033[0m       ${ORANGE}├╢${NC}"
+  echo -e "${ORANGE}╟┤ \033[38;5;109m( (__  )   / ) _) /    \ )(   ) _) \033[0m       ${ORANGE}├╢${NC}"
+  echo -e "${ORANGE}╟┤  \033[38;5;109m\___)(__\_)(____)\_/\_/(__) (____)\033[0m       ${ORANGE}├╢${NC}"
+  echo -e "${ORANGE}╟┤ \033[38;5;142m ____  ____   __     __  ____  ___  ____\033[0m  ${ORANGE}├╢${NC}"
+  echo -e "${ORANGE}╟┤ \033[38;5;142m(  _ \(  _ \ /  \  _(  )(  __)/ __)(_  _)\033[0m ${ORANGE}├╢${NC}"
+  echo -e "${ORANGE}╟┤ \033[38;5;142m ) __/ )   /(  O )/ \) \ ) _)( (__   )( \033[0m  ${ORANGE}├╢${NC}"
+  echo -e "${ORANGE}╟┤ \033[38;5;142m(__)  (__\_) \__/ \____/(____)\___) (__)\033[0m  ${ORANGE}├╢${NC}"
+  echo -e "${ORANGE}╟┤                                           ├╢${NC}"
+  echo -e "${ORANGE}╟┼┬┬┬┬┬┬┬┬┬┬┬┬┬┬┬┬┬┬┬┬┬┬┬┬┬┬┬┬┬┬┬┬┬┬┬┬┬┬┬┬┬┬┬┼╢${NC}"
+  echo -e "${ORANGE}╚╧╧╧╧╧╧╧╧╧╧╧╧╧╧╧╧╧╧╧╧╧╧╧╧╧╧╧╧╧╧╧╧╧╧╧╧╧╧╧╧╧╧╧╧╧╝${NC}"
+
   if [[ -n $1 ]]; then
     echo -e "\n\e[1;32m\e[1;5mCREATE NEW PROJECT - starting in: $1\e[0m\n"
   else
