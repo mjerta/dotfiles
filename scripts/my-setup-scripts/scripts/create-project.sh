@@ -1,4 +1,6 @@
 #!/usr/bin/env bash
+# Fail-fast on any error caused by external scripts 
+set -e
 # Setting some default values
 base_location="$HOME/develop/"
 projects[1]='testing'

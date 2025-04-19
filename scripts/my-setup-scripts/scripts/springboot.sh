@@ -19,7 +19,7 @@ read -p "Enter the group ID (default: nl.mpdev): " GROUP_ID
 GROUP_ID=${GROUP_ID:-nl.mpdev}
 
 # Initialize the Spring Boot project with Maven and additional parameters
-spring init --java-version=21 \
+output=$(spring init --java-version=21 \
   --build=maven \
   --packaging=jar \
   --artifact-id="$PROJECT_NAME" \
@@ -27,7 +27,13 @@ spring init --java-version=21 \
   --dependencies=web,devtools,data-rest,data-jpa,lombok,postgresql \
   --extract \
   --name="$PROJECT_NAME" \
-  "$PROJECT_NAME"
+  "$PROJECT_NAME" 2>&1)
+if echo $output | grep -qiE "failed"; then
+  echo "Error detected in spring init. Could not make connection"
+  echo "This error message came from the spring init"
+  echo -e "\e[31m$output\e[0m"
+  exit 1
+fi
 
 if [[ -z "$1" ]]; then
   # Get the full path of the current directory
