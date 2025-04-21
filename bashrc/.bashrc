@@ -19,6 +19,7 @@ alias spring-handy='~/my-setup-scripts/scripts/create-ntier-architecture-spring.
 alias scan='~/my-setup-scripts/scripts/scan.sh'
 alias tmux-sessionizer='~/my-setup-scripts/scripts/tmux-sessionizer.sh'
 alias compress-pdf='~/my-setup-scripts/scripts/compress-pdf.sh'
+alias http-request-handler='~/my-setup-scripts/scripts/http-request-handler.sh'
 alias .='cd ..'
 alias ..='cd ../../'
 alias ...='cd ../../../'
