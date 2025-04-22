@@ -4,6 +4,12 @@ eval "$(starship init bash)"
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
 
+#functions
+http_request_handler() {
+  ~/my-setup-scripts/scripts/http-request-handler.sh "$@"
+}
+export -f http_request_handler
+
 #aliases
 alias ls='ls -l --color=auto'
 alias grep='grep --color=auto'
@@ -19,7 +25,6 @@ alias spring-handy='~/my-setup-scripts/scripts/create-ntier-architecture-spring.
 alias scan='~/my-setup-scripts/scripts/scan.sh'
 alias tmux-sessionizer='~/my-setup-scripts/scripts/tmux-sessionizer.sh'
 alias compress-pdf='~/my-setup-scripts/scripts/compress-pdf.sh'
-alias http-request-handler='~/my-setup-scripts/scripts/http-request-handler.sh'
 alias .='cd ..'
 alias ..='cd ../../'
 alias ...='cd ../../../'
