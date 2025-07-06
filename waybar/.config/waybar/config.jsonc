@@ -7,6 +7,8 @@
   "modules-left": ["hyprland/workspaces"],
   // "modules-center": ["hyprland/window"],
   "modules-right": [
+    "custom/thinkcentre",
+    "custom/mpdev",
     "custom/weather",
     "custom/chrome",
     "network",
@@ -35,6 +37,18 @@
       //      			"eDP-1": [1, 2, 3, 4, 5],
       //      			"DP-4": [6, 7, 8, 9, 10]
     },
+  },
+  "custom/thinkcentre": {
+    "exec": "~/my-setup-scripts/scripts/vps-thinkcentre.sh",
+    "interval": 600,
+    "return-type": "json",
+    "class": "custom-thinkcentre",
+  },
+  "custom/mpdev": {
+    "exec": "~/my-setup-scripts/scripts/vps-mpdev.sh",
+    "interval": 600,
+    "return-type": "json",
+    "class": "custom-mpdev",
   },
   "custom/weather": {
     "exec": "~/my-setup-scripts/scripts/open-meteo.sh",

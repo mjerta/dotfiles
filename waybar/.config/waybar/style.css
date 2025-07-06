@@ -56,11 +56,12 @@ window#waybar {
 /* Shared custom button style */
 .custom-button {
   padding: 0 4px;
-  background-color: @base;
+  /* background-color: @base; */
+  background-color: red;
   color: @yellow;
   border: 1px solid @yellow;
   border-radius: 6px;
-
+  margin-right: 4px;
 }
 
 .custom-button:hover {
@@ -75,7 +76,6 @@ window#waybar {
   color: @yellow;
   border: 1px solid @yellow;
   border-radius: 6px;
-
 }
 
 .custom-button.urgent {
@@ -84,7 +84,10 @@ window#waybar {
   border-color: @red;
 }
 
+
 /* Apply custom-button to common custom modules */
+#custom-thinkcentre,
+#custom-mpdev,
 #custom-weather,
 #custom-chrome,
 #custom-vpn {
@@ -93,9 +96,11 @@ window#waybar {
   color: @yellow;
   border: 1px solid @yellow;
   border-radius: 6px;
-
+  margin-right: 4px;
 }
 
+#custom-thinkcentre:hover,
+#custom-mpdev:hover,
 #custom-weather:hover,
 #custom-chrome:hover,
 #custom-vpn:hover {
