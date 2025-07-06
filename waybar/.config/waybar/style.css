@@ -1,6 +1,7 @@
 /* @import "mocha.css"; */
 @import "gruvbox.css";
 
+/* Fonts and basics */
 * {
   font-family: "MesloLGS Nerd Font Mono Bold";
   font-size: 9px;
@@ -10,32 +11,32 @@
 
 window#waybar {
   background: transparent;
-  background-color: @crust;
-  /* color: @overlay0; */
   transition-property: background-color;
   transition-duration: 0.1s;
-  border-bottom: 1px solid @overlay1;
+  /* border-bottom: 1px solid @overlay1; */
 }
 
+/* Workspace Buttons */
 #window {
   margin: 4px;
   padding-left: 4px;
   padding-right: 4px;
+  padding-top: 10px;
 }
 
 #workspaces button {
-  padding: 0 2px;
+  padding: 0 4px;
   color: #fff;
-  border-radius: 0;
-  border: 1px solid @sapphire;
-  border-left: none;
+  background-color: @button-bg;
+  border-radius: 6px;
+  border: 1px solid @button-border;
+  margin-right: 4px;
 }
 
 #workspaces button:hover {
-  background: inherit;
-  color: @yellow;
-  border: 1px solid @sky;
-  border-left: none;
+  background-color: @button-hover-bg;
+  color: @button-hover-text;
+  border: 1px solid @button-hover-border;
 }
 
 #workspaces button.focused {
@@ -43,27 +44,67 @@ window#waybar {
 }
 
 #workspaces button.active {
-  background-color: rgba(50, 0, 0, 0.7);
-  color: @peach;
-  border: 1px solid @sky;
-  border-left: none;
+  background-color: @base;
+  color: @yellow;
+  border: 1px solid @yellow;
 }
 
 #workspaces button.urgent {
   background-color: #eb4d4b;
 }
 
-#custom-weather {
+/* Shared custom button style */
+.custom-button {
   padding: 0 4px;
-  border: 1px solid @sky;
-  border-right: none;
+  background-color: @base;
+  color: @yellow;
+  border: 1px solid @yellow;
+  border-radius: 6px;
+
 }
 
-#custom-chrome {
-  padding: 0 4px;
-  border: 1px solid @sky;
+.custom-button:hover {
+  background-color: @button-hover-bg;
+  color: @button-hover-text;
+  border-color: @button-hover-border;
 }
 
+.custom-button.active {
+  padding: 0 4px;
+  background-color: @base;
+  color: @yellow;
+  border: 1px solid @yellow;
+  border-radius: 6px;
+
+}
+
+.custom-button.urgent {
+  color: #fff;
+  background-color: #eb4d4b;
+  border-color: @red;
+}
+
+/* Apply custom-button to common custom modules */
+#custom-weather,
+#custom-chrome,
+#custom-vpn {
+  padding: 0 4px;
+  background-color: @base;
+  color: @yellow;
+  border: 1px solid @yellow;
+  border-radius: 6px;
+
+}
+
+#custom-weather:hover,
+#custom-chrome:hover,
+#custom-vpn:hover {
+  background-color: @button-hover-bg;
+  color: @button-hover-text;
+  border-color: @button-hover-border;
+}
+
+/* Individual module tweaks */
 #pulseaudio,
 #clock,
 #battery,
@@ -77,17 +118,16 @@ window#waybar {
 #network,
 #mode,
 #scratchpad {
-  margin-top: 2px;
-  margin-bottom: 2px;
-  margin-left: 4px;
-  margin-right: 4px;
-  padding-left: 4px;
-  padding-right: 4px;
+  margin: 2px 4px;
+  padding: 0 4px;
 }
 
 #clock {
-  color: @lavendel;
-  border-bottom: 1px solid @lavendel;
+  padding: 0 4px;
+  background-color: @base;
+  color: @yellow;
+  border: 1px solid @yellow;
+  border-radius: 6px;
 }
 
 #clock.date {
@@ -96,13 +136,19 @@ window#waybar {
 }
 
 #pulseaudio {
-  color: @blue;
-  border-bottom: 2px solid @blue;
+  padding: 0 4px;
+  background-color: @base;
+  color: @yellow;
+  border: 1px solid @yellow;
+  border-radius: 6px;
 }
 
 #network {
-  color: @teal;
-  border-bottom: 0.5px solid @yellow;
+  padding: 0 4px;
+  background-color: @base;
+  color: @yellow;
+  border: 1px solid @yellow;
+  border-radius: 6px;
 }
 
 #idle_inhibitor {
@@ -115,23 +161,24 @@ window#waybar {
 }
 
 #battery {
-  color: @green;
-  border-bottom: 2px solid @green;
+  padding: 0 4px;
+  background-color: @base;
+  color: @yellow;
+  border: 1px solid @yellow;
+  border-radius: 6px;
 }
 
-/* If workspaces is the leftmost module, omit left margin */
+/* Workspace margin tweaks */
 .modules-left>widget:first-child>#workspaces {
-  margin-left: 0;
+  padding-top: 6px;
+  padding-bottom: 6px;
+  margin-left: 6px;
 }
 
-/* If workspaces is the rightmost module, omit right margin */
-.modules-right>widget:last-child>#workspaces {
-  margin-right: 0;
-}
+.modules-right>widget:last-child>#workspaces {}
 
-#custom-vpn {
-  color: @lavender;
-  border-radius: 15px;
-  padding-left: 6px;
-  padding-right: 6px;
+.modules-right {
+  margin-right: 6px;
+  padding-top: 6px;
+  padding-bottom: 6px;
 }

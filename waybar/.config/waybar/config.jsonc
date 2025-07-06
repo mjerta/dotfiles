@@ -1,8 +1,19 @@
 {
+  "hide-on-fullscreen": true,
+  "layer": "top",
+  "exclusive": true,
+  "height": 30,
   "position": "top",
   "modules-left": ["hyprland/workspaces"],
-  "modules-center": ["hyprland/window"],
-  "modules-right": ["custom/weather", "custom/chrome", "network", "pulseaudio", "battery", "clock"],
+  // "modules-center": ["hyprland/window"],
+  "modules-right": [
+    "custom/weather",
+    "custom/chrome",
+    "network",
+    "pulseaudio",
+    "battery",
+    "clock",
+  ],
   "hyprland/workspaces": {
     "all-outputs": false,
     "active-only": false,
@@ -35,12 +46,12 @@
     "on-click": "google-chrome",
     "tooltip": true,
     "tooltip-format": "Google Chrome",
-    "on-click": "google-chrome-stable"
+    "on-click": "google-chrome-stable",
   },
   "clock": {
     "format": "<span foreground='#b4befe'>   </span>{:%a %d %H:%M}",
     "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
-    "on-click": "xdg-open https://calendar.notion.so"
+    "on-click": "xdg-open https://calendar.notion.so",
   },
   "battery": {
     "states": {
@@ -74,4 +85,3 @@
     "on-click": "pavucontrol",
   },
 }
-
