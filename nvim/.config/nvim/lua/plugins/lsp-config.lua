@@ -20,6 +20,7 @@ return {
 					"cssls",
 					"emmet_ls",
 					"lemminx",
+          "jsonls",
 				},
 			})
 		end,
@@ -59,6 +60,9 @@ return {
 			lspconfig.lemminx.setup({
 				capabilities = capabilities,
 			})
+      lspconfig.jsonls.setup({
+        capabilities = capabilities,
+      })
 			local lombok_path = vim.fn.expand("~/.local/share/lombok/lombok.jar")
 			lspconfig.jdtls.setup({
 				cmd = {

@@ -132,6 +132,7 @@ while true; do
     # Adding all options in for creating the type of project
     if [[ "$type_project" == "Empty" ]]; then
       mkdir -p "$new_folder"
+      cd "$new_folder"
       break
     elif [[ "$type_project" == "Vite" ]]; then
       cd $folder_special_use_case
