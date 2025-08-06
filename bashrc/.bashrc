@@ -1,5 +1,6 @@
 #evaluations
 eval "$(starship init bash)"
+eval "$(~/my-setup-scripts/scripts/set-random-image-hyprlock.sh)"
 
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
@@ -22,6 +23,7 @@ alias githubclone='~/my-setup-scripts/scripts/githubclone.sh'
 alias springboot='~/my-setup-scripts/scripts/springboot.sh'
 alias maven='~/my-setup-scripts/scripts/maven.sh'
 alias maven-quickstart='~/my-setup-scripts/scripts/maven-quickstart.sh'
+alias deploy-maven='~/my-setup-scripts/scripts/deploy-maven.sh'
 alias spring-handy='~/my-setup-scripts/scripts/create-ntier-architecture-spring.sh'
 alias scan='~/my-setup-scripts/scripts/scan.sh'
 alias tmux-sessionizer='~/my-setup-scripts/scripts/tmux-sessionizer.sh'
