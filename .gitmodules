@@ -1,0 +1,3 @@
+[submodule "scripts/my-setup-scripts/scripts/dynamic-dns"]
+	path = scripts/my-setup-scripts/scripts/dynamic-dns
+	url = https://github.com/mjerta/dynamic-dns.git
