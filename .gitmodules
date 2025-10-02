@@ -4,3 +4,6 @@
 [submodule "scripts/my-setup-scripts/scripts/vps-status-report"]
 	path = scripts/my-setup-scripts/scripts/vps-status-report
 	url = https://github.com/mjerta/vps-status-report.git
+[submodule "wallpapers/.config/wallpapers"]
+	path = wallpapers/.config/wallpapers
+	url = git@github.com:JoydeepMallick/Wallpapers.git
