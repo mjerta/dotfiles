@@ -10,16 +10,18 @@ WORKSPACE_CONFIG_FILE="$HOME/.config/hypr/conf/workspace_config.conf"
 >"$WORKSPACE_CONFIG_FILE"
 
 if [[ "$BNQ_INFO" == "BNQ" ]]; then
-
   for i in {1..5}; do
-    echo "workspace= $i,monitor:DP-5, default:true" >>"$WORKSPACE_CONFIG_FILE"
+    echo "workspace= $i,monitor:DP-3, default:true" >>"$WORKSPACE_CONFIG_FILE"
   done
-  for i in {6..7}; do
-    echo "workspace= $i,monitor:eDP-1, default:true" >>"$WORKSPACE_CONFIG_FILE"
-  done
-  for i in {8..10}; do
+  for i in {6..10}; do
     echo "workspace= $i,monitor:DP-4, default:true" >>"$WORKSPACE_CONFIG_FILE"
   done
+  # for i in {6..7}; do
+  #   echo "workspace= $i,monitor:eDP-1, default:true" >>"$WORKSPACE_CONFIG_FILE"
+  # done
+  # for i in {8..10}; do
+  #   echo "workspace= $i,monitor:DP-4, default:true" >>"$WORKSPACE_CONFIG_FILE"
+  # done
 else
   for i in {1..5}; do
     echo "workspace= $i,monitor:eDP-1, default:true" >>"$WORKSPACE_CONFIG_FILE"

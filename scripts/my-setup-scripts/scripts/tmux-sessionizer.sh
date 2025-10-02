@@ -7,11 +7,12 @@ search_dirs() {
   find -L "$dir" -mindepth 1 -maxdepth 1 -type d |
     awk '{print NR ": " $0}' |
     fzf --reverse \
-        --header=$'TMUX-SESSIONIZER \nSearching inside:'"$dir"$' \nCTRL-p for ~/.config\nCTRL-f for ~/dotfiles\nCTRL-d for ~/develop/projects\nCTRl-t for ~/develop/testing\n\n' \
+        --header=$'TMUX-SESSIONIZER \nSearching inside:'"$dir"$' \nCTRL-p for ~/.config\nCTRL-f for ~/dotfiles\nCTRL-d for ~/develop/projects\nCTRl-t for ~/develop/testing\nCTRL-n for ~/notes\n\n' \
         --bind "ctrl-p:reload(find -L ~/.config ~/my-setup-scripts -mindepth 1 -maxdepth 1 -type d | awk '{print NR \": \" \$0}')" \
         --bind "ctrl-f:reload(find -L ~/dotfiles -mindepth 1 -maxdepth 1 -type d | awk '{print NR \": \" \$0}')" \
         --bind "ctrl-d:reload(find -L ~/develop/projects -mindepth 1 -maxdepth 1 -type d | awk '{print NR \": \" \$0}')" \
-        --bind "ctrl-t:reload(find -L ~/develop/testing -mindepth 1 -maxdepth 1 -type d | awk '{print NR \": \" \$0}')" \
+        --bind "ctrl-t:reload(find -L ~/develop/testing -mindepth 1 -maxdepth 1 -type d | awk '{print NR ": " \$0}')" \
+        --bind "ctrl-n:reload(find -L ~/notes -mindepth 1 -maxdepth 1 -type d | awk '{print NR ": " \$0}')" \
         --bind 'enter:accept' |
     cut -d: -f2-
 }
