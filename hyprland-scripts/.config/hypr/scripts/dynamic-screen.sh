@@ -23,5 +23,5 @@ else
   notify-send "Mjerta downstairs setup detected"
   # Configure monitors
   hyprctl keyword monitor "eDP-1,preferred,0x0,1"
-  hyprctl keyword monitor "DP-3,preferred,auto-left,1"
+  hyprctl keyword monitor "DP-4,preferred,auto-left,1"
 fi

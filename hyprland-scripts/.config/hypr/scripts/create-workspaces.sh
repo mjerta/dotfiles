@@ -28,6 +28,6 @@ else
   done
 
   for i in {6..10}; do
-    echo "workspace= $i,monitor:DP-3, default:true" >>"$WORKSPACE_CONFIG_FILE"
+    echo "workspace= $i,monitor:DP-4, default:true" >>"$WORKSPACE_CONFIG_FILE"
   done
 fi
