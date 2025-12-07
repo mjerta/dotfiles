@@ -11,6 +11,16 @@ http_request_handler() {
 }
 export -f http_request_handler
 
+nvs() {
+  if [ -z "$1" ]; then
+    echo "Usage: nvs <profile>"
+    echo "Example: nvs main  OR  nvs lazy"
+    return 1
+  fi
+  export NVIM_APPNAME="nvim-$1"
+  nvim "${@:2}"
+}
+
 #aliases
 alias ls='ls -l --color=auto'
 alias grep='grep --color=auto'
@@ -77,4 +87,3 @@ export PATH=/home/mjerta/.opencode/bin:$PATH
 #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
 export SDKMAN_DIR="$HOME/.sdkman"
 [[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
-
