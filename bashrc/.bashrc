@@ -1,6 +1,10 @@
 #evaluations
 eval "$(starship init bash)"
-eval "$(~/my-setup-scripts/scripts/set-random-image-hyprlock.sh)"
+if [ -z "$WSL_DISTRO_NAME" ]; then
+  eval "$(~/my-setup-scripts/scripts/set-random-image-hyprlock.sh)"
+else
+  source ~/.bashrc-windows
+fi
 
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
@@ -59,6 +63,11 @@ bind '"\C-f": "bash ~/my-setup-scripts/scripts/tmux-sessionizer.sh\n"'
 bind '"\ef": "bash ~/my-setup-scripts/scripts/create-project.sh\n"'
 
 #exports
+if [ -z "$WSL_DISTRO_NAME" ]; then
+  export DEVELOP=/mnt/d/develop/
+else
+  export DEVELOP=/mnt/d/develop/
+fi
 export EDITOR=nvim
 export GH_EDITOR=nvim
 export NVM_DIR="$HOME/.nvm"
@@ -72,9 +81,13 @@ if [ -f ~/.bashrc_secrets ]; then
   source ~/.bashrc_secrets
 fi
 source /usr/share/git/completion/git-completion.bash
-source "$HOME/.sdkman/bin/sdkman-init.sh"
+if [ -z "$WSL_DISTRO_NAME" ]; then
+  source "$HOME/.sdkman/bin/sdkman-init.sh"
+fi
 # Load Angular CLI autocompletion.
-source <(ng completion script)
+if ng completion --help >/dev/null 2>&1; then
+  source <(ng completion script)
+fi
 
 neofetch
 
@@ -85,5 +98,7 @@ export PATH="$PATH:/home/mjerta/.local/bin"
 export PATH=/home/mjerta/.opencode/bin:$PATH
 
 #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
-export SDKMAN_DIR="$HOME/.sdkman"
-[[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
+if [ -z "$WSL_DISTRO_NAME" ]; then
+  export SDKMAN_DIR="$HOME/.sdkman"
+  [[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
+fi
