@@ -15,16 +15,6 @@ http_request_handler() {
 }
 export -f http_request_handler
 
-nvs() {
-  if [ -z "$1" ]; then
-    echo "Usage: nvs <profile>"
-    echo "Example: nvs main  OR  nvs lazy"
-    return 1
-  fi
-  export NVIM_APPNAME="nvim-$1"
-  nvim "${@:2}"
-}
-
 #aliases
 alias ls='ls -l --color=auto'
 alias grep='grep --color=auto'
@@ -56,6 +46,9 @@ alias stmux='tmux source-file ~/.tmux.conf'
 alias update='sudo pacman -Sy'
 alias snvim=' sudo nvim'
 alias n='nvim'
+alias ps='powershell.exe'
+alias magic-dev='cd /mnt/d/magic-dev-environments/Trade/Env/'
+alias winnvim='cd /mnt/c/Users/mpostma/Appdata/Local/nvim-lazy/'
 PS1='[\u@\h \W]\$ '
 
 #bindings
@@ -75,6 +68,17 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion" # This loads nvm bash_completion
 export JAVA_HOME=/usr/lib/jvm/java-21-amazon-corretto
 export PATH=$JAVA_HOME/bin:$PATH
+# Default starting with lazy
+export NVIM_APPNAME="nvim-lazy"
+nvs() {
+  if [ -z "$1" ]; then
+    echo "Usage: nvs <profile>"
+    echo "Example: nvs main  OR  nvs lazy"
+    return 1
+  fi
+  export NVIM_APPNAME="nvim-$1"
+  nvim "${@:2}"
+}
 
 #sources
 if [ -f ~/.bashrc_secrets ]; then
@@ -89,7 +93,8 @@ if ng completion --help >/dev/null 2>&1; then
   source <(ng completion script)
 fi
 
-neofetch
+# Turned off due to perfomance issues
+# neofetch
 
 # Created by `pipx` on 2025-07-18 22:29:46
 export PATH="$PATH:/home/mjerta/.local/bin"

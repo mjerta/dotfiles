@@ -2,7 +2,7 @@
 # Fail-fast on any error caused by external scriptssc 
 set -e
 # Setting some default values
-base_location="$HOME/develop/"
+base_location="$DEVELOP"
 projects[1]='testing'
 projects[2]='projects'
 
