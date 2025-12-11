@@ -48,7 +48,7 @@ alias snvim=' sudo nvim'
 alias n='nvim'
 alias ps='powershell.exe'
 alias magic-dev='cd /mnt/d/magic-dev-environments/Trade/Env/'
-alias winnvim='cd /mnt/c/Users/mpostma/Appdata/Local/nvim-lazy/'
+alias winlocal='cd /mnt/c/Users/mpostma/Appdata/Local/'
 PS1='[\u@\h \W]\$ '
 
 #bindings
