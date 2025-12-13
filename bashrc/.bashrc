@@ -57,7 +57,7 @@ bind '"\ef": "bash ~/my-setup-scripts/scripts/create-project.sh\n"'
 
 #exports
 if [ -z "$WSL_DISTRO_NAME" ]; then
-  export DEVELOP=/mnt/d/develop/
+  export DEVELOP=~/develop/
 else
   export DEVELOP=/mnt/d/develop/
 fi
