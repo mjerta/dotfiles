@@ -9,8 +9,14 @@ RANDOM_WALLPAPER=$(find "$WALLPAPER_DIR" -type f | shuf -n 1)
 # Output temp Hyprpaper config
 CONFIG_FILE="$HOME/.config/hypr/hyprpaper.conf"
 
-cat > "$CONFIG_FILE" <<EOF
+cat >"$CONFIG_FILE" <<EOF
 preload = $RANDOM_WALLPAPER
-wallpaper = ,$RANDOM_WALLPAPER
-EOF
 
+splash = false
+
+wallpaper {
+    monitor = 
+    path = $RANDOM_WALLPAPER
+    fit_mode = cover
+}
+EOF
