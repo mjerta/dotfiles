@@ -1,0 +1,47 @@
+#!/bin/bash
+
+echo "Top 36 Useful Linux Commands:"
+echo "=============================="
+
+commands=(
+  "ls - List directory contents"
+  "cd - Change current directory"
+  "pwd - Print current working directory"
+  "mkdir - Create a new directory"
+  "rm - Remove files or directories"
+  "cp - Copy files or directories"
+  "mv - Move or rename files"
+  "cat - Display file contents"
+  "less - View file content page by page"
+  "touch - Create an empty file"
+  "find - Search for files in directory hierarchy"
+  "grep - Search text using patterns"
+  "df - Show disk usage of file systems"
+  "du - Estimate file/directory space usage"
+  "free - Display memory usage"
+  "top - Display running processes in real time"
+  "htop - Enhanced interactive process viewer"
+  "ps - Report process status"
+  "kill - Terminate a process by PID"
+  "pkill - Kill processes by name"
+  "chmod - Change file permissions"
+  "chown - Change file owner and group"
+  "tar - Archive files"
+  "gzip - Compress files"
+  "unzip - Extract ZIP archives"
+  "ping - Test network connectivity (e.g., ping -c 4 google.com)"
+  "curl - Transfer data from/to server (e.g., curl -I http://example.com)"
+  "wget - Download files from the web (e.g., wget http://example.com/file.txt)"
+  "ssh - Securely connect to remote machine (e.g., ssh user@host)"
+  "ss -tuln - Show all listening TCP/UDP ports"
+  "ip a - Show network interface configuration"
+  "dig example.com - Query DNS records"
+  "netstat -tuln - List active network connections"
+  "nc -l -p 8080 - Listen on port 8080 for connections"
+  "traceroute google.com - Trace path to destination"
+  "mtr google.com - Real-time route and ping analysis"
+)
+
+for cmd in "${commands[@]}"; do
+  echo "$cmd"
+done

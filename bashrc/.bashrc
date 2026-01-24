@@ -33,6 +33,8 @@ alias scan='~/my-setup-scripts/scripts/scan.sh'
 alias tmux-sessionizer='~/my-setup-scripts/scripts/tmux-sessionizer.sh'
 alias compress-pdf='~/my-setup-scripts/scripts/compress-pdf.sh'
 alias open-meteo='~/my-setup-scripts/scripts/open-meteo.sh'
+alias commands='~/my-setup-scripts/scripts/commands.sh'
+alias filesystem='~/my-setup-scripts/scripts/filesystem.sh'
 alias .='cd ..'
 alias ..='cd ../../'
 alias ...='cd ../../../'
@@ -46,7 +48,9 @@ alias stmux='tmux source-file ~/.tmux.conf'
 alias update='sudo pacman -Sy'
 alias snvim=' sudo nvim'
 alias n='nvim'
-alias ps='powershell.exe'
+if [ -n "$WSL_DISTRO_NAME" ]; then
+  alias ps='powershell.exe'
+fi
 alias magic-dev='cd /mnt/d/magic-dev-environments/Trade/Env/'
 alias winlocal='cd /mnt/c/Users/mpostma/Appdata/Local/'
 PS1='[\u@\h \W]\$ '
@@ -57,7 +61,7 @@ bind '"\ef": "bash ~/my-setup-scripts/scripts/create-project.sh\n"'
 
 #exports
 if [ -z "$WSL_DISTRO_NAME" ]; then
-  export DEVELOP=/mnt/d/develop/
+  export DEVELOP=~/develop/
 else
   export DEVELOP=/mnt/d/develop/
 fi
