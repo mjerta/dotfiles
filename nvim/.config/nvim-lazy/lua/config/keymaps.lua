@@ -7,3 +7,7 @@
 vim.keymap.set("n", "<C-n>", function()
   require("neo-tree.command").execute({ toggle = true, reveal = true })
 end, { desc = "Toggle Neo-tree" })
+
+vim.keymap.set("i", "<C-n>", function()
+  require("cmp").complete()
+end, { desc = "Trigger completion" })

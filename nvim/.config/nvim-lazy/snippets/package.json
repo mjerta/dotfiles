@@ -1,0 +1,15 @@
+{
+  "name": "generated-snippets",
+  "contributes": {
+    "snippets": [
+      {
+        "language": "html",
+        "path": "./html.json"
+      },
+      {
+        "language": "htmlangular",
+        "path": "./html.json"
+      }
+    ]
+  }
+}

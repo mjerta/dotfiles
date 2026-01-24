@@ -1,0 +1,691 @@
+{
+  "trDefaultButton": {
+    "prefix": "trDefaultButton",
+    "body": [
+      "<app-default-button",
+      "[control]=\"${1:control}\"",
+      "></app-default-button>"
+    ],
+    "scope": "html,htmlangular",
+    "description": "Synced from buttons.md"
+  },
+  "trDefaultButtonSize": {
+    "prefix": "trDefaultButtonSize",
+    "body": [
+      "<app-default-button",
+      "[control]=\"${1:control}\"",
+      "btnSize=\"${2:size}\"",
+      "></app-default-button>"
+    ],
+    "scope": "html,htmlangular",
+    "description": "Synced from buttons.md"
+  },
+  "trHamburgerButton": {
+    "prefix": "trHamburgerButton",
+    "body": [
+      "<app-hamburger-button",
+      "[isMobileMenuOpen]=\"${1:boolean}\"",
+      "(clicked)=\"${2:method}\"",
+      "></app-hamburger-button>"
+    ],
+    "scope": "html,htmlangular",
+    "description": "Synced from buttons.md"
+  },
+  "trHamburgerButtonVisibleOnAllScreenSizes": {
+    "prefix": "trHamburgerButtonVisibleOnAllScreenSizes",
+    "body": [
+      "<app-hamburger-button",
+      "[isMobileMenuOpen]=\"${1:isMobileMenuOpenBoolean}\"",
+      "[visibleOnAllSceenSizes]=\"${2:visibleOnAllScreenSizesBoolean}\"",
+      "(clicked)=\"${3:method}\"",
+      "></app-hamburger-button>"
+    ],
+    "scope": "html,htmlangular",
+    "description": "Synced from buttons.md"
+  },
+  "trKeyboard": {
+    "prefix": "trKeyboard",
+    "body": [
+      "<!-- Align is optional -->",
+      "<app-keyboard",
+      "[control]=\"${1:control}\"",
+      "[align]=\"'${2:align}'\">",
+      "</app-keyboard>"
+    ],
+    "scope": "html,htmlangular",
+    "description": "Synced from buttons.md"
+  },
+  "trDefaultHeader": {
+    "prefix": "trDefaultHeader",
+    "body": [
+      "<!-- align,transform,color are optional -->",
+      "<app-default-header",
+      "[control]=\"${1:control}\"",
+      "size=\"${2:size}\"",
+      "transform=\"${3:transform}\"",
+      "color=\"${4:blue}\"",
+      "align=\"${5:align}\"",
+      "></app-default-header>"
+    ],
+    "scope": "html,htmlangular",
+    "description": "Synced from headers.md"
+  },
+  "trDefaultHeaderTextInput": {
+    "prefix": "trDefaultHeaderTextInput",
+    "body": [
+      "<!-- align,transform,color are optional -->",
+      "<app-default-header",
+      "[control]=\"${1:control}\"",
+      "textInput=\"${2:textInput}\"",
+      "size=\"${3:size}\"",
+      "transform=\"${4:transform}\"",
+      "color=\"${5:color}\"",
+      "align=\"${6:align}\"",
+      "></app-default-header>"
+    ],
+    "scope": "html,htmlangular",
+    "description": "Synced from headers.md"
+  },
+  "trDefaultImageContainer": {
+    "prefix": "trDefaultImageContainer",
+    "body": [
+      "<!-- altName and size are optional -->",
+      "<app-default-image-container",
+      "[imgUrl]=\"${1:url}\"",
+      "[control]=\"${2:control}\"",
+      "[altName]=\"${3:altName}\"",
+      "size=\"${4:size}\"",
+      "></app-default-image-container>"
+    ],
+    "scope": "html,htmlangular",
+    "description": "Synced from image_containers.md"
+  },
+  "trDefaultImageContainerExternalMg": {
+    "prefix": "trDefaultImageContainerExternalMg",
+    "body": [
+      "<!-- altName and size are optional -->",
+      "<app-default-image-container",
+      "[imgUrl]=\"${1:url}\"",
+      "[externalMg]=\"${2:mg}\"",
+      "[control]=\"${3:control}\"",
+      "[altName]=\"${4:altName}\"",
+      "size=\"${5:size}\"",
+      "></app-default-image-container>"
+    ],
+    "scope": "html,htmlangular",
+    "description": "Synced from image_containers.md"
+  },
+  "trInputDate": {
+    "prefix": "trInputDate",
+    "body": [
+      "<!-- id and class are optional -->",
+      "<input-date",
+      "*ngIf=\"mg.getVisible(${1:control}) !== 'hidden'\"",
+      "[id]=\"${2:id}\"",
+      "[formGroup]=\"${3:formGroup}\"",
+      "[controlName]=\"${4:control}\"",
+      "[class]=\"'${5:class}'\"",
+      "></input-date>"
+    ],
+    "scope": "html,htmlangular",
+    "description": "Synced from inputs.md"
+  },
+  "trInputScan": {
+    "prefix": "trInputScan",
+    "body": [
+      "<!-- delayResetTime and size are optional -->",
+      "<app-input-scan",
+      "[control]=\"${1:control}\"",
+      "[fg]=\"${2:formGroup}\"",
+      "[delayResetTime]=\"${3:time}\"",
+      "(barcodeComplete)=\"${4:method}\"",
+      "size=\"${5:size}\"",
+      "></app-input-scan>"
+    ],
+    "scope": "html,htmlangular",
+    "description": "Synced from inputs.md"
+  },
+  "trInputScanAmount": {
+    "prefix": "trInputScanAmount",
+    "body": [
+      "<!-- align is optional -->",
+      "<app-input-scan-amount",
+      "[firstControl]=\"${1:firstControl}\"",
+      "[secondControl]=\"${2:secondControl}\"",
+      "[desired]=\"${3:desired}\"",
+      "[scanned]=\"${4:scanned}\"",
+      "align=\"${5:align}\"",
+      "></app-input-scan-amount>"
+    ],
+    "scope": "html,htmlangular",
+    "description": "Synced from inputs.md"
+  },
+  "trDefaultInputLabelComponent": {
+    "prefix": "trDefaultInputLabelComponent",
+    "body": [
+      "<!-- size is optional -->",
+      "<app-default-input-label",
+      "[fg]=\"${1:formGroup}\"",
+      "[values]=\"${2:valueObject}\"",
+      "size=\"${3:size}\"",
+      "></app-default-input-label>"
+    ],
+    "scope": "html,htmlangular",
+    "description": "Synced from input_labels.md"
+  },
+  "trInputLabelYellow": {
+    "prefix": "trInputLabelYellow",
+    "body": [
+      "<app-input-label-yellow",
+      "[fg]=\"${1:formGroup}\"",
+      "[label]=\"${2:label}\"",
+      "[control]=\"${3:control}\"",
+      "></app-input-label-yellow>"
+    ],
+    "scope": "html,htmlangular",
+    "description": "Synced from input_labels.md"
+  },
+  "trButtonBar": {
+    "prefix": "trButtonBar",
+    "body": [
+      "<app-button-bar",
+      "[buttons]=\"${1:buttons}\"",
+      "></app-button-bar>"
+    ],
+    "scope": "html,htmlangular",
+    "description": "Synced from loop_components.md"
+  },
+  "trButtonBarVertical": {
+    "prefix": "trButtonBarVertical",
+    "body": [
+      "<app-button-bar-vertical",
+      "[buttons]=\"${1:buttons}\"",
+      "></app-button-bar-vertical>"
+    ],
+    "scope": "html,htmlangular",
+    "description": "Synced from loop_components.md"
+  },
+  "trDefaultInputLabelsLoop": {
+    "prefix": "trDefaultInputLabelsLoop",
+    "body": [
+      "<!-- size is optional -->",
+      "<app-default-input-labels-loop",
+      "[fg]=\"${1:formGroup}\"",
+      "[values]=\"${2:values}\"",
+      "size=\"${3:size}\"",
+      "></app-default-input-labels-loop>"
+    ],
+    "scope": "html,htmlangular",
+    "description": "Synced from loop_components.md"
+  },
+  "trEanCodes": {
+    "prefix": "trEanCodes",
+    "body": [
+      "<!-- extraDisabledCondition is optional -->",
+      "<app-ean-codes",
+      "[title]=\"${1:title}\"",
+      "[eanCodes]=\"${2:eanCodes}\"",
+      "[extraDisabledCondition]=\"${3:condition}\"",
+      "></app-ean-codes>"
+    ],
+    "scope": "html,htmlangular",
+    "description": "Synced from loop_components.md"
+  },
+  "trInsertButtons": {
+    "prefix": "trInsertButtons",
+    "body": [
+      "<app-insert-buttons",
+      "[buttons]=\"${1:buttons}\"",
+      "[excludeButton]=\"${2:excludeButton}\"",
+      "[isMaxLengthReached]=\"${3:boolean}\"",
+      "></app-insert-buttons>"
+    ],
+    "scope": "html,htmlangular",
+    "description": "Synced from loop_components.md"
+  },
+  "trDefaultFormTable": {
+    "prefix": "trDefaultFormTable",
+    "body": [
+      "<!-- mgdp, datasource and selections are defaults -->",
+      "<app-default-form-table",
+      "[displayedColumns]=\"mgdp\"",
+      "[dataSource]=\"dataSource\"",
+      "[selection]=\"selection\"",
+      "[columns]=\"${1:columns}\"",
+      "[table]=\"${2:table}\"",
+      "[fg]=\"${3:formGroup}\"",
+      "[taskMode]=\"${4:taskMode}\"",
+      "></app-default-form-table>"
+    ],
+    "scope": "html,htmlangular",
+    "description": "Synced from mat-dialog-content.md"
+  },
+  "trItemLabelVertical": {
+    "prefix": "trItemLabelVertical",
+    "body": [
+      "<app-item-label-vertical",
+      "[fg]=\"${1:formGroup}\"",
+      "[controls]=\"${2:controls}\"",
+      "></app-item-label-vertical>"
+    ],
+    "scope": "html,htmlangular",
+    "description": "Synced from mat-dialog-content.md"
+  },
+  "trDefaultBarcodeSection": {
+    "prefix": "trDefaultBarcodeSection",
+    "body": [
+      "<app-default-barcode-section>",
+      "<ng-container first-label>",
+      "{{ ${1:fistLabel} }}",
+      "</ng-container>",
+      "<ng-container barcode>",
+      "<!-- delayResetTime and size are optional -->",
+      "<app-input-scan",
+      "[control]=\"${2:control}\"",
+      "[fg]=\"${3:formGroup}\"",
+      "[delayResetTime]=\"${4:time}\"",
+      "(barcodeComplete)=\"${5:method}\"",
+      "size=\"${6:size}\"",
+      "></app-input-scan>",
+      "</ng-container>",
+      "<ng-container second-label>",
+      "{{ ${7:secondLabel} }}",
+      "</ng-container>",
+      "</app-default-barcode-section>"
+    ],
+    "scope": "html,htmlangular",
+    "description": "Synced from template_components.md"
+  },
+  "trDefaultFieldset": {
+    "prefix": "trDefaultFieldset",
+    "body": [
+      "<!-- fieldSetTitle is being used by setting magic custon property with its key to 'name' on the group -->",
+      "<app-default-fieldset [fieldSetTitle]=\"${1:title}\">",
+      "<ng-container default-fieldset-content>",
+      "${2:content}",
+      "</ng-container>",
+      "</app-default-fieldset>"
+    ],
+    "scope": "html,htmlangular",
+    "description": "Synced from template_components.md"
+  },
+  "trDefaultMainTemplate": {
+    "prefix": "trDefaultMainTemplate",
+    "body": [
+      "<!--CONTENT PROJECTION IS APPLIED HERE-->",
+      "<app-default-section [layout]=\"'column'\" [padding]=\"'no-padding'\" [magic]=\"${1:magicComponent}\">",
+      "<ng-container section-content>",
+      "<app-default-main-template [formatRow3]=\"'${2:formatRow3}'\">",
+      "<ng-container row1-start>",
+      "<ng-container *ngTemplateOutlet=\"row1Start\"></ng-container>",
+      "</ng-container>",
+      "<ng-container row2-start>",
+      "<ng-container *ngTemplateOutlet=\"row2Start\"></ng-container>",
+      "</ng-container>",
+      "<ng-container row3-start>",
+      "<ng-container *ngTemplateOutlet=\"row3Start\"></ng-container>",
+      "</ng-container>",
+      "<ng-container row4-start>",
+      "<ng-container *ngTemplateOutlet=\"row4Start\"></ng-container>",
+      "</ng-container>",
+      "<ng-container row1-center>",
+      "<ng-container *ngTemplateOutlet=\"row1Center\"></ng-container>",
+      "</ng-container>",
+      "<ng-container row2-center>",
+      "<ng-container *ngTemplateOutlet=\"row2Center\"></ng-container>",
+      "</ng-container>",
+      "<ng-container row3-full>",
+      "<ng-container *ngTemplateOutlet=\"row3Full\"></ng-container>",
+      "</ng-container>",
+      "<ng-container row3-center>",
+      "<ng-container *ngTemplateOutlet=\"row3Center\"></ng-container>",
+      "</ng-container>",
+      "<ng-container row4-center>",
+      "<ng-container *ngTemplateOutlet=\"row4Center\"></ng-container>",
+      "</ng-container>",
+      "<ng-container row1-end>",
+      "<!-- Screenservice is used to prevent double triggers on the same formcontrol, make sure to inject this-->",
+      "<ng-container *ngIf=\"!(screenService.mobileViewSubject$ | async)\">",
+      "<ng-container *ngTemplateOutlet=\"row1End\"></ng-container>",
+      "</ng-container>",
+      "</ng-container>",
+      "<ng-container row2-end>",
+      "<ng-container *ngTemplateOutlet=\"row2End\"></ng-container>",
+      "</ng-container>",
+      "<ng-container row3-end>",
+      "<ng-container *ngTemplateOutlet=\"row3End\"></ng-container>",
+      "</ng-container>",
+      "<ng-container row4-end>",
+      "<ng-container *ngTemplateOutlet=\"row4End\"></ng-container>",
+      "</ng-container>",
+      "",
+      "<!--MOBILE VIEW-->",
+      "<ng-container mobile-row1-start>",
+      "<ng-container *ngTemplateOutlet=\"row1Start\"></ng-container>",
+      "</ng-container>",
+      "<ng-container mobile-row2-start>",
+      "<ng-container *ngTemplateOutlet=\"row2Start\"></ng-container>",
+      "</ng-container>",
+      "<ng-container mobile-row3-start>",
+      "<ng-container *ngTemplateOutlet=\"row3Start\"></ng-container>",
+      "</ng-container>",
+      "<ng-container mobile-row4-start>",
+      "<ng-container *ngTemplateOutlet=\"row4Start\"></ng-container>",
+      "</ng-container>",
+      "<ng-container mobile-row1-center>",
+      "<ng-container *ngTemplateOutlet=\"row1Center\"></ng-container>",
+      "</ng-container>",
+      "<ng-container mobile-row2-center>",
+      "<ng-container *ngTemplateOutlet=\"row2Center\"></ng-container>",
+      "</ng-container>",
+      "<ng-container mobile-row3-center>",
+      "<ng-container *ngTemplateOutlet=\"row3Center\"></ng-container>",
+      "</ng-container>",
+      "<ng-container mobile-row4-center>",
+      "<ng-container *ngTemplateOutlet=\"row4Center\"></ng-container>",
+      "</ng-container>",
+      "<ng-container mobile-row1-end>",
+      "<!-- Screenservice is used to prevent double triggers on the same formcontrol, make sure to inject this-->",
+      "<ng-container *ngIf=\"(screenService.mobileViewSubject$ | async)\">",
+      "<ng-container *ngTemplateOutlet=\"row1End\"></ng-container>",
+      "</ng-container>",
+      "</ng-container>",
+      "<ng-container mobile-row2-end>",
+      "<ng-container *ngTemplateOutlet=\"row2End\"></ng-container>",
+      "</ng-container>",
+      "<ng-container mobile-row3-end>",
+      "<ng-container *ngTemplateOutlet=\"row3End\"></ng-container>",
+      "</ng-container>",
+      "<ng-container mobile-row4-end>",
+      "<ng-container *ngTemplateOutlet=\"row4End\"></ng-container>",
+      "</ng-container>",
+      "</app-default-main-template>",
+      "</ng-container>",
+      "</app-default-section>",
+      "<ng-template #row1Start>",
+      "${3:row1Start}",
+      "</ng-template>",
+      "",
+      "<ng-template #row1Center>",
+      "${4:row1Center}  ",
+      "</ng-template>",
+      "",
+      "<ng-template #row1End>",
+      "${5:row1End} ",
+      "</ng-template>",
+      "",
+      "<ng-template #row2Start>",
+      "${6:row2Start} ",
+      "</ng-template>",
+      "",
+      "<ng-template #row2Center>",
+      "${7:row2Center} ",
+      "</ng-template>",
+      "",
+      "<ng-template #row2End>",
+      "${8:row2End} ",
+      "</ng-template>",
+      "",
+      "<!-- input formatRow3 is full -->",
+      "<ng-template #row3Full>",
+      "${9:row3Full} ",
+      "</ng-template>",
+      "",
+      "<!-- input formatRow3 is seperate ( formatRow3 is not being used in mobile view ) -->",
+      "<ng-template #row3Start>",
+      "${10:row3Start} ",
+      "</ng-template>",
+      "",
+      "<!-- input formatRow3 is seperate ( formatRow3 is not being used in mobile view ) -->",
+      "<ng-template #row3Center>",
+      "${11:row3Center} ",
+      "</ng-template>",
+      "",
+      "<!-- input formatRow3 is seperate ( formatRow3 is not being used in mobile view ) -->",
+      "<ng-template #row3End>",
+      "${12:row3End} ",
+      "</ng-template>",
+      "",
+      "<ng-template #row4Start>",
+      "${13:row4Start} ",
+      "</ng-template>",
+      "",
+      "<ng-template #row4Center>",
+      "${14:row4Center} ",
+      "</ng-template>",
+      "",
+      "<ng-template #row4End>",
+      "${15:row4End} ",
+      "</ng-template>"
+    ],
+    "scope": "html,htmlangular",
+    "description": "Synced from template_components.md"
+  },
+  "trDefaultSection": {
+    "prefix": "trDefaultSection",
+    "body": [
+      "<!-- all inputs are optional -->",
+      "<app-default-section [layout]=\"'${1:column}'\" [border]=\"'${2:border}'\" [padding]=\"'${3:padding}'\" [grow]=\"'${4:grow}'\" [gap]=\"'${5:gap}'\" [align]=\"'${6:align}'\">",
+      "<ng-container section-content>",
+      "${7:content}",
+      "</ng-container>",
+      "</app-default-section>"
+    ],
+    "scope": "html,htmlangular",
+    "description": "Synced from template_components.md"
+  },
+  "trDefaultSectionPlusMinusButtons": {
+    "prefix": "trDefaultSectionPlusMinusButtons",
+    "body": [
+      "<!-- all inputs are optional -->",
+      "<app-default-section-plusminus-buttons [layout]=\"'${1:column}'\" [border]=\"'${2:border}'\" [padding]=\"'${3:padding}'\" [grow]=\"'${4:grow}'\" [gap]=\"'${5:gap}'\" [align]=\"'${6:align}'\">",
+      "<ng-container section-content>",
+      "${7:content}",
+      "</ng-container>",
+      "</app-default-section-plusminus-buttons>"
+    ],
+    "scope": "html,htmlangular",
+    "description": "Synced from template_components.md"
+  },
+  "trMatDialogActionsBetween": {
+    "prefix": "trMatDialogActionsBetween",
+    "body": [
+      "<!-- layout and border are optional -->",
+      "<app-mat-dialog [layout]=\"'${1:layout}'\" [border]=\"'${2:border}'\">",
+      "",
+      "<ng-container dialog-title>",
+      "{{ mg.getValue(mgc.${3:title}) || mg.getText(mgc.${4:title}) }}",
+      "</ng-container>",
+      "",
+      "<ng-container dialog-middle>",
+      "<!-- Expecting max 2 elements or components -->",
+      "</ng-container>",
+      "",
+      "<ng-container dialog-end-between>",
+      "<app-buttons-container",
+      "[button1]=\"mgc.${5:select}\"",
+      "[button2]=\"mgc.${6:exit}\">",
+      "</app-buttons-container>",
+      "</ng-container>",
+      "",
+      "</app-mat-dialog>"
+    ],
+    "scope": "html,htmlangular",
+    "description": "Synced from template_components.md"
+  },
+  "trMatDialogActionsEnd": {
+    "prefix": "trMatDialogActionsEnd",
+    "body": [
+      "<!-- layout and border are optional -->",
+      "<app-mat-dialog [layout]=\"'${1:layout}'\" [border]=\"'${2:border}'\">",
+      "",
+      "<ng-container dialog-title>",
+      "{{ mg.getValue(mgc.${3:title}) || mg.getText(mgc.${4:title}) }}",
+      "</ng-container>",
+      "",
+      "<ng-container dialog-middle>",
+      "<!-- Expecting max 2 elements or components -->",
+      "</ng-container>",
+      "",
+      "<ng-container dialog-end-between>",
+      "<app-buttons-container",
+      "[button1]=\"mgc.${5:select}\"",
+      "[button2]=\"mgc.${6:exit}\">",
+      "</app-buttons-container>",
+      "</ng-container>",
+      "",
+      "</app-mat-dialog>"
+    ],
+    "scope": "html,htmlangular",
+    "description": "Synced from template_components.md"
+  },
+  "trMatDialogContent": {
+    "prefix": "trMatDialogContent",
+    "body": [
+      "<!-- layout and border are optional -->",
+      "<app-mat-dialog [layout]=\"'${1:layout}'\" [border]=\"'${2:border}'\">",
+      "",
+      "<ng-container dialog-middle>",
+      "<!-- Expecting max 2 elements or components -->",
+      "</ng-container>",
+      "",
+      "</app-mat-dialog-content>"
+    ],
+    "scope": "html,htmlangular",
+    "description": "Synced from template_components.md"
+  },
+  "trMatDialogImageCaptionActionsBetween": {
+    "prefix": "trMatDialogImageCaptionActionsBetween",
+    "body": [
+      "<!-- layout,border,src,alt and caption are optional -->",
+      "<app-mat-dialog [layout]=\"'${1:layout}'\" [border]=\"'${2:border}'\">",
+      "<ng-container dialog-title-image>",
+      "<app-image-caption",
+      "src=\"${3:src}\"",
+      "alt=\"${4:alt}\"",
+      "[caption]=\"${5:caption}\">",
+      "</app-image-caption>",
+      "</ng-container>",
+      "",
+      "<ng-container dialog-title>",
+      "{{ mg.getValue(mgc.${6:title}) || mg.getText(mgc.${7:title} }}",
+      "</ng-container>",
+      "",
+      "<ng-container dialog-middle>",
+      "<!-- expecting max 2 elements or components here -->",
+      "</ng-container>",
+      "",
+      "<ng-container dialog-end-between>",
+      "<!-- expecting max 2 elements or components here -->",
+      "${8:firstEelement}",
+      "<app-buttons-container",
+      "[button1]=\"mgc.${9:select}\"",
+      "[button2]=\"mgc.${10:exit}\">",
+      "</app-buttons-container>",
+      "",
+      "</ng-container>",
+      "",
+      "</app-mat-dialog>"
+    ],
+    "scope": "html,htmlangular",
+    "description": "Synced from template_components.md"
+  },
+  "trMatDialogImageCaptionActionsEnd": {
+    "prefix": "trMatDialogImageCaptionActionsEnd",
+    "body": [
+      "<!-- layout,border,src,alt and caption are optional -->",
+      "<app-mat-dialog [layout]=\"'${1:layout}'\" [border]=\"'${2:border}'\">",
+      "<ng-container dialog-title-image>",
+      "<app-image-caption",
+      "src=\"${3:src}\"",
+      "alt=\"${4:alt}\"",
+      "[caption]=\"mg.getValue(mgc.${5:caption})\">",
+      "</app-image-caption>",
+      "</ng-container>",
+      "",
+      "<ng-container dialog-title>",
+      "{{ mg.getValue(mgc.${6:title}) || mg.getText(mgc.${7:title} }}",
+      "</ng-container>",
+      "",
+      "<ng-container dialog-middle>",
+      "<!-- expecting max 2 elements or components here -->",
+      "</ng-container>",
+      "",
+      "<ng-container dialog-end>",
+      "<!-- expecting max 2 elements or components here -->",
+      "<app-buttons-container",
+      "[button1]=\"mgc.${8:select}\"",
+      "[button2]=\"mgc.${9:exit}\">",
+      "</app-buttons-container>",
+      "",
+      "</ng-container>",
+      "",
+      "</app-mat-dialog>"
+    ],
+    "scope": "html,htmlangular",
+    "description": "Synced from template_components.md"
+  },
+  "trTemplateInputLabelInsertButtons": {
+    "prefix": "trTemplateInputLabelInsertButtons",
+    "body": [
+      "<app-template-input-label-insert-buttons>",
+      "<ng-container input-label>",
+      "",
+      "<app-input-label-yellow",
+      "[label]=\"${1:label}\"",
+      "[control]=\"${2:control}\"",
+      "[fg]=\"${3:formGroup}\"",
+      "></app-input-label-yellow>",
+      "",
+      "</ng-container>",
+      "<ng-container insert-buttons>",
+      "",
+      "<app-default-button",
+      "btnSize=\"square-small\"",
+      "[control]=\"${4:plusButton}\"",
+      "></app-default-button>",
+      "<app-default-button",
+      "btnSize=\"square-small\"",
+      "[control]=\"\"",
+      "></app-default-button>",
+      "",
+      "</ng-container>",
+      "</app-template-input-label-insert-buttons>"
+    ],
+    "scope": "html,htmlangular",
+    "description": "Synced from template_components.md"
+  },
+  "trDefaultMagicPageSubform": {
+    "prefix": "trDefaultMagicPageSubform",
+    "body": [
+      "<app-default-section [layout]=\"'column'\" [padding]=\"'no-padding'\" [magic]=\"${1:magicControl}\">",
+      "<ng-container section-content>",
+      "<magic-subform [magic]=\"${2:magicSubformControl}\">",
+      "</magic-subform>",
+      "</ng-container>",
+      "</app-default-section>"
+    ],
+    "scope": "html,htmlangular",
+    "description": "Synced from template_components.md"
+  },
+  "trDefaultMagicPageSubformWithNavigation": {
+    "prefix": "trDefaultMagicPageSubformWithNavigation",
+    "body": [
+      "<app-default-section [layout]=\"'column'\" [padding]=\"'no-padding'\" [magic]=\"${1:magicControl}\">",
+      "<ng-container section-content>",
+      "<app-button-bar",
+      "[buttons]=\"${2:buttons}\"",
+      "></app-button-bar>",
+      "<app-hamburger-button",
+      "[isMobileMenuOpen]=\"${3:boolean}\"",
+      "(clicked)=\"${4:boolean}\"",
+      "></app-hamburger-button>",
+      "<magic-subform [magic]=\"${5:magicSubformControl}\">",
+      "</magic-subform>",
+      "</ng-container>",
+      "</app-default-section>"
+    ],
+    "scope": "html,htmlangular",
+    "description": "Synced from template_components.md"
+  }
+}
