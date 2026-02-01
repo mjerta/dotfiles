@@ -7,3 +7,6 @@
 [submodule "wallpapers/.config/wallpapers"]
 	path = wallpapers/.config/wallpapers
 	url = git@github.com:JoydeepMallick/Wallpapers.git
+[submodule "scripts/my-setup-scripts/scripts/ai-scripts"]
+	path = scripts/my-setup-scripts/scripts/ai-scripts
+	url = https://github.com/mjerta/ai-scripts.git
