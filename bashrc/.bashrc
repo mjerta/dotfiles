@@ -19,7 +19,6 @@ export -f http_request_handler
 alias ls='ls -l --color=auto'
 alias grep='grep --color=auto'
 alias wifi='nmtui'
-alias ai='~/my-setup-scripts/scripts/ai.sh'
 alias openai-tokens='~/my-setup-scripts/scripts/check-ai-tokens.sh'
 alias githublink='~/my-setup-scripts/scripts/githublink.sh'
 alias githubrepo='~/my-setup-scripts/scripts/creategithubrepo.sh'
@@ -48,6 +47,7 @@ alias stmux='tmux source-file ~/.tmux.conf'
 alias update='sudo pacman -Sy'
 alias snvim=' sudo nvim'
 alias n='nvim'
+alias ??='~/my-setup-scripts/scripts/ai-scripts/prompt.sh'
 if [ -n "$WSL_DISTRO_NAME" ]; then
   alias ps='powershell.exe'
 fi
