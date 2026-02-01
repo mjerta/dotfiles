@@ -10,3 +10,6 @@
 [submodule "scripts/my-setup-scripts/scripts/ai-scripts"]
 	path = scripts/my-setup-scripts/scripts/ai-scripts
 	url = https://github.com/mjerta/ai-scripts.git
+[submodule "scripts/my-setup-scripts/scripts/notion-tui"]
+	path = scripts/my-setup-scripts/scripts/notion-tui
+	url = https://github.com/mjerta/notion-tui.git
