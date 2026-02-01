@@ -55,6 +55,14 @@
     "scope": "html,htmlangular",
     "description": "Synced from buttons.md"
   },
+  "trTest": {
+    "prefix": "trTest",
+    "body": [
+      "<test></test>"
+    ],
+    "scope": "html,htmlangular",
+    "description": "Synced from buttons.md"
+  },
   "trDefaultHeader": {
     "prefix": "trDefaultHeader",
     "body": [
