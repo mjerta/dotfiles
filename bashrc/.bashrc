@@ -62,8 +62,10 @@ bind '"\ef": "bash ~/my-setup-scripts/scripts/create-project.sh\n"'
 #exports
 if [ -z "$WSL_DISTRO_NAME" ]; then
   export DEVELOP=~/develop/
+  export NOTES=~/notes/
 else
   export DEVELOP=/mnt/d/develop/
+  export NOTES=/mnt/d/notes/
 fi
 export EDITOR=nvim
 export GH_EDITOR=nvim
