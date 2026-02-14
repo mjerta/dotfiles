@@ -11,3 +11,11 @@ end, { desc = "Toggle Neo-tree" })
 vim.keymap.set("i", "<C-n>", function()
   require("cmp").complete()
 end, { desc = "Trigger completion" })
+
+-- Copy to system clipboard
+vim.keymap.set({ "n", "v" }, "<leader>y", [["+y]], { desc = "Copy to system clipboard" })
+vim.keymap.set("n", "<leader>Y", [["+Y]], { desc = "Copy line to system clipboard" })
+
+-- Paste from system clipboard
+vim.keymap.set({ "n", "v" }, "<leader>p", [["+p]], { desc = "Paste from system clipboard" })
+vim.keymap.set({ "n", "v" }, "<leader>P", [["+P]], { desc = "Paste before from system clipboard" })
